@@ -48,11 +48,11 @@ def write_to_csv(data):
 def submit_form():
     if request.method == 'POST':
     	try:
-	    	data = request.form.to_dict()
-	    	write_to_csv(data)
-	    	return redirect('/thankyou.html')
-	    except:
-	    	return 'did not save to DB'
+		data = request.form.to_dict()
+		write_to_csv(data)
+		return redirect('/thankyou.html')
+	except:
+		return 'did not save to DB'
     else:
     	return 'Please Try Again!'
 
